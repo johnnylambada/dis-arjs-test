@@ -12,10 +12,12 @@
     <a-assets>
         <a-asset-item id="strawberry-obj" src="assets/strawberry.obj"></a-asset-item>
         <a-asset-item id="strawberry-mtl" src="assets/strawberry.mtl"></a-asset-item>
+        <a-asset-item id="strawberry-gltf" src="assets/strawberry.gltf"></a-asset-item>
       </a-assets>
       <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
     <!-- <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 33.72734365490763; longitude: -118.03190001396891" scale="3 3 3"></a-entity> -->
-    <a-entity obj-model="obj: #strawberry-obj; mtl: #strawberry-mtl" gps-new-entity-place="latitude: 33.72734365490763; longitude: -118.03190001396891"></a-entity>
+    <!-- <a-entity obj-model="obj: #strawberry-obj; mtl: #strawberry-mtl" gps-new-entity-place="latitude: 33.72734365490763; longitude: -118.03190001396891"></a-entity> -->
+    <a-entity gltf-model="#strawberry-gltfl" gps-new-entity-place="latitude: 33.72734365490763; longitude: -118.03190001396891"></a-entity>
 </a-scene>
 
 <script>
