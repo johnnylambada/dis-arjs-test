@@ -42,6 +42,21 @@ window.onload = () => {
                 longitude: e.detail.position.longitude
             });
             document.querySelector("a-scene").appendChild(entity);
+
+            // Add a box to the north of the initial GPS position
+            const sberry = document.createElement("a-entity");
+            sberry.setAttribute("scale", {
+                x: 20, 
+                y: 20,
+                z: 20
+            });
+            sberry.setAttribute('gltf-model', "#strawberry-gltf" );
+            sberry.setAttribute('gps-new-entity-place', {
+                latitude: e.detail.position.latitude + 0.001,
+                longitude: e.detail.position.longitude + 0.001
+            });
+            document.querySelector("a-scene").appendChild(sberry);
+
         }
         testEntityAdded = true;
     });
